@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Internet</title>
+    <link rel="stylesheet" type="text/css" href="arena.css">
+    <meta charset="UTF-8">
+</head>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url="";
+        $("#btnArena1").hover(function () {
+            $(".container").css("background-image", "url('BG/Falls.gif')");
+        },
+            function () {
+                if(url==""){
+                    $(".container").css("background-image", "url('BG/Japan.jpg')");
+                }                
+            });
+
+        $("#btnArena2").hover(function () {
+            $(".container").css("background-image", "url('BG/PirateShip.gif')");
+
+        },
+            function () {
+                if(url==""){
+                    $(".container").css("background-image", "url('BG/Japan.jpg')");
+                }
+            });
+        $("#btnArena3").hover(function () {
+            $(".container").css("background-image", "url('BG/Ruins.gif')");
+
+        },
+            function () {
+                if(url==""){
+                    $(".container").css("background-image", "url('BG/Japan.jpg')");
+                }
+            });
+        $("#btnArena4").hover(function () {
+            $(".container").css("background-image", "url('BG/SpaceShip.gif')");
+
+        },
+            function () {
+                if(url==""){
+                    $(".container").css("background-image", "url('BG/Japan.jpg')");
+                }
+            });
+        $("#btnArena5").hover(function () {
+            $(".container").css("background-image", "url('BG/Santana.gif')");
+
+        },
+            function () {
+                if(url==""){
+                    $(".container").css("background-image", "url('BG/Japan.jpg')");
+                }
+            });
+        $("#btnArena6").hover(function () {
+            $(".container").css("background-image", "url('BG/Tokyo.gif')");
+
+        },
+            function () {
+                if(url==""){
+                    $(".container").css("background-image", "url('BG/Japan.jpg')");
+                }
+            });
+        $("button").click(function(){
+            url = "url('" + String($(this).val()) + "')";
+            $(".buttons").hide();
+            $(".drpPlayers").show();   
+            $(".container").css("background-image", url);
+            $("h1").text("Select Players");
+        });
+        $("#drpPlayer1").change(function(){
+            var player=String($("#drpPlayer1").val());
+            $(".hero1").remove();
+            $("#arena").before("<img src='"+player+"' alt='Duplicate Ninja' class='hero1'>");
+        });
+        $("#drpPlayer2").change(function(){
+            var player=String($("#drpPlayer2").val());
+            $(".hero2").remove();
+            $("#arena").before("<img src='"+player+"' alt='Duplicate Ninja' class='hero2'>");
+        });
+        $(".drpPlayers").hide();
+    });
+
+</script>
+
+<body>
+    <div class="container">
+        <div class="arena" id="arena">
+            <h1>Select Arena</h1>
+            <button type="button" class="buttons" id="btnArena1" value="BG/Falls.gif">Falls</button>
+            <button type="button" class="buttons" id="btnArena2" value="BG/PirateShip.gif">Pirate Ship</button>
+            <button type="button" class="buttons" id="btnArena3" value="BG/Ruins.gif">Ruins</button>
+            <button type="button" class="buttons" id="btnArena4" value="BG/SpaceShip.gif">Space Ship</button>
+            <button type="button" class="buttons" id="btnArena5" value="BG/Santana.gif">Santana</button>
+            <button type="button" class="buttons" id="btnArena6" value="BG/Tokyo.gif">Tokyo</button>
+            <select id="drpPlayer1" class="drpPlayers">
+                <option value="Player1">Player 1</option>
+                <option value="BG/donny.png">Donny</option>
+                <option value="BG/raphael.png">Raphael</option>
+                <option value="BG/leo.png">Leonardo</option>
+                <option value="BG/mikey.png">Micheal</option>
+            </select>
+            <select id="drpPlayer2" class="drpPlayers">
+                    <option value="Player2">Player 2</option>
+                    <option value="BG/donny.png">Donny</option>
+                    <option value="BG/raphael.png">Raphael</option>
+                    <option value="BG/leo.png">Leonardo</option>
+                    <option value="BG/mikey.png">Micheal</option>
+            </select>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

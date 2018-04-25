@@ -1,0 +1,42 @@
+*{
+    margin: auto;
+    padding: 0px;
+    border: 1px dotted red;
+}
+.container{
+    width: 1000px;
+    height: 700px;
+    background-color: black;
+    border: 10px solid grey;
+    background-image: url("BG/Japan.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+    .arena{
+        height: 200px;
+        width: 300px;
+        background-color: silver;
+        border-radius: 12px;
+        margin-top: 200px;
+    }
+    .arena h1{
+        color: yellow;
+        margin-left: 60px;        
+    }
+    .arena button{
+        height: 25px;
+        width: 80px;
+        display: inline-block;
+        margin: 10px;
+        margin-left: 40px;
+    }
+    .arena select{
+        margin: 10px;
+        margin-left: 40px;
+    }
+    .hero1,.hero2{
+        vertical-align: middle;
+        height: 150px;
+        width: 75px;
+    }
+
